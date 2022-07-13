@@ -1,0 +1,10 @@
+{
+  "name": "Symple",
+  "description": "Easily access symbols",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Launch Symple",
+    "default_popup": "popup/popup.html"
+  }
+}
