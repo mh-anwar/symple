@@ -1,3 +1,10 @@
+:root {
+  --background: aliceblue;
+  --foreground: rgb(129, 122, 122);
+  --color: black;
+  --primary: #2d2d2d;
+}
+
 html {
   height: 300px;
   width: 300px;
@@ -6,6 +13,8 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  background-color: var(--background);
+  color: var(--color);
 }
 h1 {
   font-size: 2em;
@@ -13,6 +22,8 @@ h1 {
 }
 
 header {
+  background-color: inherit;
+  color: inherit;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -24,10 +35,14 @@ header > button {
   width: 15%;
   height: 15%;
   padding: 0.8em;
-  border: 1px solid transparent;
-  border-radius: 0.3em;
 }
-
+button {
+  background-color: var(--foreground);
+  border: 2px solid var(--primary);
+  border-radius: 0.8em;
+  color: var(--color);
+  opacity: 1;
+}
 img {
   display: block;
   margin-left: auto;
@@ -35,11 +50,47 @@ img {
   width: 100%;
 }
 
-select {
-  flex: 100%;
-  padding: 0.3em;
+main {
   margin: 0.3em;
+}
+
+select {
+  background-color: #393939;
+  color: inherit;
+  width: 100%;
+  align-self: center;
+  padding: 0.3em;
   border: 1px solid transparent;
   border-radius: 0.3em;
   outline: transparent;
+}
+
+.button-list {
+  display: none;
+}
+
+.toggled-button-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0.3em;
+}
+
+.copy-button {
+  width: 30px;
+  height: 30px;
+  background-color: inherit;
+  color: inherit;
+  border: 1.5px solid white;
+  border-radius: 0.3rem;
+  margin: 0.3rem;
+  padding: 1px;
+  font-size: 17px;
+  opacity: 0.8;
+  transition: opactity 2s;
+}
+
+.copy-button:hover {
+  opacity: 1;
 }
